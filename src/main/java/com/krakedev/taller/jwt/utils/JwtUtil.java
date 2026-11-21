@@ -50,8 +50,9 @@ public class JwtUtil {
 
         } catch (JWTVerificationException e) {
 
-            throw new RuntimeException("Token invalido o expirado");
+            System.out.println("ERROR AL VALIDAR JWT: " + e.getMessage());
 
+            throw new RuntimeException("Token invalido o expirado");
         }
     }
 }
